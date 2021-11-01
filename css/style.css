@@ -1,0 +1,144 @@
+:root{
+    --azul: #1c0abe;
+    --preto:  #141414
+}
+
+/* zerando as configurações */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--preto);
+    color: aliceblue;
+    font-size: 24px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*formatando o menu de navegação*/
+.container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+.container > .logo{
+    font-size: 20px;
+    font-weight:lighter;
+    margin-left: 5px;
+}
+
+.container > .logo span{
+    color: #1c0abe;
+}
+
+.container > nav{
+    font-size: 14px;
+    font-weight:lighter;
+}
+
+.container > nav a{
+    margin-right: 15px;
+    color: aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.container > nav a:hover{
+    color: #1c0abe;
+}
+
+/* conteudo principal */
+.anime-principal{
+    padding-left: 5px;
+    background: linear-gradient(rgba(0,0,0, .50), rgba(0,0,0, .50)100%), url('../img/capa-kimetsu.jpg');
+   
+    height: 500px;
+    background-size: 100% 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.anime-principal .descricao{
+   
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.anime-principal .titulo{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.botoes button{
+    margin-top: 40px;
+    margin-right: 5px;
+    font-size: 15px;
+    background-color: rgba(0,0,0, .50);
+    color: aliceblue;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+
+    cursor: pointer;
+    transition: .5s ease all ;
+}
+
+.botoes button:hover{
+    color: black;
+    background-color: aliceblue;
+}
+
+.botoes i{
+    margin-right: 5px;
+}
+
+.box-animes{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.carrosel{
+    margin-top: 5px;
+}
+
+.carrosel .titulo-animes{
+    color: #1c0abe;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+/*responsivo*/
+
+@media  screen and (max-width:1000px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .anime-principal .descricao{
+        width: 50%;
+    }
+
+    .anime-principal .titulo{
+        width: 50%;
+    }
+}
